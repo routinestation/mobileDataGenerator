@@ -1,0 +1,87 @@
+{
+  "configuration": {
+    "home_network_mcc": "0xDE",
+    "home_network_mnc": "0x3C",
+    "ue_height": 1.5,
+    "network_frequency": 2.0,
+    "ue_gain": 0.0,
+    "thermal_noise": -104.5,
+    "ue_noise_figure": 7.0,
+    "cable_loss": 2.0,
+    "rssi_max": -95,
+    "rssi_migration": -90,
+    "migration_signal": 10,
+    "min_signal": 0,
+    "sample_interval": 1,
+    "route_interval": [600, 900],
+    "msin_range": [1, 1000],
+    "total_ues": 5,
+    "routes_for_ue": [50, 100]
+  },
+  "tracksposition": {
+    "tfiles": [
+      "./inputdata/highway_UTM.geojson",
+      "./inputdata/road_UTM.geojson",
+      "./inputdata/train_UTM.geojson"
+    ]
+  },
+  "enbposition": {
+    "enbfile": "./inputdata/enb2_UTM.geojson"
+  },
+  "cellsposition": {
+    "cellsfile": "./inputdata/cells2_3.json"
+  },
+  "routes": [
+    {
+      "type": "Route",
+      "properties": {
+        "name": "Highway",
+        "category": 1,
+        "lspeed": 70,
+        "hspeed": 110
+      },
+      "tracks": [
+        "Highway1North"
+      ]
+    },
+    {
+      "type": "Route",
+      "properties": {
+        "name": "Main Road",
+        "category": 3,
+        "lspeed": 30,
+        "hspeed": 70
+      },
+      "tracks": [
+        "Road1North",
+        "Road2North"
+      ]
+    },
+    {
+      "type": "Route",
+      "properties": {
+        "name": "Road Back",
+        "category": 3,
+        "lspeed": 30,
+        "hspeed": 60
+      },
+      "tracks": [
+        "Road1North",
+        "Road1South"
+      ]
+    },
+    {
+      "type": "Route",
+      "properties": {
+        "name": "Train",
+        "category": 2,
+        "lspeed": 80,
+        "hspeed": 120
+      },
+      "tracks": [
+        "Train1North",
+        "Train2North"
+      ]
+    }
+  ]
+}
